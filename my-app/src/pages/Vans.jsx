@@ -6,15 +6,15 @@ import '../server';
 
 const Vans = () => {
 
-    const [vanDatas, setVanDatas] = useState([]);
+    const [vansData, setVansData] = useState([]);
 
     useEffect(() => {
         fetch("/api/vans")
             .then(res => res.json())
-            .then(data => setVanDatas(data.vans))
+            .then(data => setVansData(data?.vans))
     }, []);
 
-    const vanCards = vanDatas.map((van) => {
+    const vanCards = vansData.map((van) => {
         return <VanCard key={van.id} {...van} />
     })
 
@@ -36,7 +36,9 @@ const Vans = () => {
 
             <section className="main">
                 <div className="cards">
-                    {vanCards}
+                    {
+                        vanCards ? vanCards : <div className="loading">Loading...</div>
+                    }
                 </div>
             </section>
 

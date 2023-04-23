@@ -295,6 +295,7 @@ h6 {
 .card {
   grid-column-end: span 4;
   display: flex;
+  color: black;
   flex-direction: column;
   cursor: pointer;
   transition: all 0.3s ease 0s;
@@ -324,20 +325,130 @@ h6 {
 .card .title :first-child {
   font-weight: 800;
 }
-.van-btn {
-  color: whitesmoke;
-  padding: 0.5rem;
-  background-color: orange;
-  font-size: 1.2rem;
+.van-type {
   font-weight: 700;
-  border-radius: 0.4rem;
-  display: flex;
-  justify-content: center;
+  padding: 0.5rem;
   width: 40%;
   margin: 1rem;
-  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffead0;
+  color: #4d4d4d;
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.van-type:hover {
+  color: #ffead0;
+}
+
+.van-type:focus {
+  outline: none;
+}
+
+.van-type.selected {
+  color: #ffead0;
+}
+
+.van-type.simple:hover,
+.van-type.simple.selected {
+  background-color: #e17654;
+}
+
+.van-type.rugged:hover,
+.van-type.rugged.selected {
+  background-color: #115e59;
+}
+
+.van-type.luxury:hover,
+.van-type.luxury.selected {
+  background-color: #161616;
+}
+
+.van-type.clear-filters {
+  margin-left: -20px;
+  height: 34px;
+  padding: 6px 26px;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  text-decoration: underline;
+  background-color: transparent;
+  color: #4d4d4d;
+}
+
+i[class*="van-type-"] {
+  padding: 7px 14px;
+}
+.loading {
+  font-size: 3rem;
+  font-weight: 900;
+  position: absolute;
+  left: 0%;
+  right: 0;
+  background-color: wheat;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 /*vans end*/
+
+/*van-detail starts*/
+.van-detail .van-detail-card {
+  display: block;
+  width: 100%;
+  margin: 2rem auto;
+}
+.van-detail .van-detail-card img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 0.5rem;
+  filter: contrast(100%);
+}
+.van-detail-card h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 1rem 0;
+}
+.van-detail-card h2 {
+  margin: 1rem 0;
+}
+.van-detail-card .van-type {
+  margin: 1rem 0;
+  width: 10%;
+}
+.van-detail-card h2 :first-child {
+  font-weight: 800;
+}
+.van-detail-card p {
+  font-size: 1rem;
+  margin: 1rem 0;
+  color: gray;
+}
+.van-detail-card .rent-type {
+  background-color: wheat;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.van-detail-card .rent-type:hover {
+  background-color: orange;
+  border: 1px solid black;
+}
+/*van-detail ends*/
 
 /* responsive */
 @media only screen and (max-width: 1200px) {
@@ -350,18 +461,23 @@ h6 {
   .vans-top h1 {
     text-align: center;
   }
-  .filters {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  .van-detail-card .van-type {
+    margin: 1rem 0;
+    width: 20%;
   }
 }
 
 @media only screen and (max-width: 1000px) {
   .card {
     grid-column-end: span 6;
+  }
+  .van-detail-card .van-type {
+    margin: 1rem 0;
+    width: 25%;
+  }
+  .van-detail-card .rent-type {
+    padding: .9rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -371,6 +487,24 @@ h6 {
   }
   .card {
     grid-column-end: span 12;
+  }
+  .filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .van-detail-card img {
+    width: 100%;
+  }
+  .van-detail-card .van-type {
+    margin: 1rem 0;
+    width: 30%;
+  }
+  .van-detail-card .rent-type {
+    padding: .8rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -393,6 +527,17 @@ h6 {
   .logo > a {
     font-size: 1.5rem;
   }
+  .van-detail-card img {
+    width: 100%;
+  }
+  .van-detail-card .van-type {
+    margin: 1rem 0;
+    width: 35%;
+  }
+  .van-detail-card .rent-type {
+    padding: .7rem;
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -408,6 +553,13 @@ h6 {
   .card {
     grid-column-end: span 6;
   }
+  .van-detail-card img {
+    width: 100%;
+  }
+  .van-detail-card .van-type {
+    margin: 1rem 0;
+    width: 40%;
+  }
 }
 @media only screen and (max-width: 425px) {
   .content h1 {
@@ -418,5 +570,12 @@ h6 {
   }
   .card-sec-div .custom-btn {
     font-size: 1rem;
+  }
+  .van-detail-card img {
+    width: 100%;
+  }
+  .van-detail-card .van-type {
+    margin: 1rem 0;
+    width: 45%;
   }
 }
