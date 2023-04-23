@@ -122,7 +122,6 @@ h6 {
 .nav-menu li :hover {
   text-decoration: underline;
 }
-
 .hero {
   background-image: url("~/public/images/lands.jpg");
   background-blend-mode: overlay;
@@ -165,6 +164,7 @@ h6 {
   border: 3px solid var(--mil-green);
   border-radius: 5rem;
   cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .content .find-btn:hover {
   background-color: var(--mil-green);
@@ -178,7 +178,6 @@ h6 {
   background-image: linear-gradient(to top, black, black);
   opacity: 0.7;
 }
-
 .footer {
   background-color: black;
   color: gray;
@@ -193,7 +192,7 @@ h6 {
   width: 100%;
   height: 40vh;
 }
-.about img{
+.about img {
   width: 100%;
   height: 50vh;
   object-fit: cover;
@@ -201,46 +200,144 @@ h6 {
 .container {
   padding: 0 2rem;
 }
-.content-sec{
+.content-sec {
   margin: 2rem 0;
 }
-.content-sec h1{
+.content-sec h1 {
   font-size: 2rem;
   text-align: left;
   font-weight: 900;
 }
-.content-sec p{
+.content-sec p {
   color: gray;
   font-weight: 800;
 }
-.card-sec{
+.card-sec {
   margin: 2rem 0;
 }
-.card-sec-div{
+.card-sec-div {
   background-color: wheat;
-  border-radius: .1rem;
+  border-radius: 0.1rem;
   padding: 2rem;
 }
-.card-sec-div h2{
+.card-sec-div h2 {
   font-size: 1.5rem;
   font-weight: 900;
   margin: 1rem 0 2rem 0;
 }
-
-.card-sec-div .custom-btn{
+.card-sec-div .custom-btn {
   background-color: black;
   color: whitesmoke;
   padding: 1rem;
-  border-radius: .5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0.5rem;
   cursor: pointer;
   border: 1px solid black;
 }
-.card-sec-div .custom-btn:hover{
+.card-sec-div .custom-btn:hover {
   background-color: whitesmoke;
   color: black;
   border: 1px solid black;
 }
 /*about end*/
+
+/*vans start*/
+.vans .vans-top h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 2rem 0;
+}
+.filters {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+.filter-btn {
+  background-color: wheat;
+  padding: 0.5rem 1rem;
+  font-weight: 800;
+  border: 1px solid wheat;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.filter-btn:hover {
+  background-color: transparent;
+  border: 1px solid black;
+}
+.filter-clear-btn {
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 800;
+  display: inline-block;
+  background: linear-gradient(#000 0 0);
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s;
+}
+.filter-clear-btn:hover {
+  background-position: 100% 100%;
+  background-size: 100% 2px;
+}
+.main {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+  grid-gap: 40px;
+  padding: 3.75rem 0;
+}
+.cards {
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 3.75rem));
+  grid-gap: 40px;
+}
+.card {
+  grid-column-end: span 4;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  border-radius: 0.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card img {
+  height: 100%;
+  object-fit: cover;
+}
+.card .title {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .title h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.card .title h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card .title :first-child {
+  font-weight: 800;
+}
+.van-btn {
+  color: whitesmoke;
+  padding: 0.5rem;
+  background-color: orange;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin: 1rem;
+  cursor: pointer;
+}
+/*vans end*/
 
 /* responsive */
 @media only screen and (max-width: 1200px) {
@@ -249,6 +346,31 @@ h6 {
   }
   .content h1 {
     font-size: 2.5rem;
+  }
+  .vans-top h1 {
+    text-align: center;
+  }
+  .filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .card {
+    grid-column-end: span 6;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .main {
+    grid-gap: 20px;
+  }
+  .card {
+    grid-column-end: span 12;
   }
 }
 
@@ -259,28 +381,42 @@ h6 {
   .content h1 {
     font-size: 2rem;
   }
-  .content-sec h1{
+  .content-sec h1 {
     font-size: 1.5rem;
   }
-  .card-sec-div h2{
+  .card-sec-div h2 {
     font-size: 1.3rem;
   }
-  .footer{
+  .footer {
     font-size: 1.3rem;
   }
-  .logo > a{
+  .logo > a {
     font-size: 1.5rem;
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .main {
+    grid-template-columns: 10px repeat(6, 1fr) 10px;
+    grid-gap: 10px;
+  }
+  .cards {
+    grid-column: 2 / span 6;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+  }
+  .card {
+    grid-column-end: span 6;
+  }
+}
 @media only screen and (max-width: 425px) {
   .content h1 {
     font-size: 1.5rem;
   }
-  .content-sec h1{
+  .content-sec h1 {
     font-size: 1.3rem;
   }
-  .card-sec-div .custom-btn{
+  .card-sec-div .custom-btn {
     font-size: 1rem;
   }
 }
