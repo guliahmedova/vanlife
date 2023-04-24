@@ -20,10 +20,9 @@ const Vans = () => {
 
     return (
         <div className="vans">
-            <Navbar />
             <section className="vans-top">
                 <div className="container">
-                    <h1>Explore our van options</h1>
+                    <h1 className="vans-title">Explore our van options</h1>
 
                     <div className="filters">
                         <button className="filter-btn">Simple</button>
@@ -42,7 +41,6 @@ const Vans = () => {
                 </div>
             </section>
 
-            <Footer />
         </div>
     )
 }

@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar"
 const About = () => {
     return (
         <div className="about">
-            <Navbar />
 
             <section className="img-sec">
                 <img src="./images/abouthero.png" alt="" />
@@ -33,7 +32,6 @@ const About = () => {
                     </div>
                 </div>
             </section>
-            <Footer />
         </div>
     )
 }

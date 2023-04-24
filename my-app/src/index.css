@@ -191,6 +191,7 @@ h6 {
 .about {
   width: 100%;
   height: 40vh;
+  margin-bottom: 35rem;
 }
 .about img {
   width: 100%;
@@ -398,6 +399,9 @@ i[class*="van-type-"] {
   justify-content: center;
   text-align: center;
 }
+.vans-title {
+  text-align: center;
+}
 /*vans end*/
 
 /*van-detail starts*/
@@ -465,6 +469,9 @@ i[class*="van-type-"] {
     margin: 1rem 0;
     width: 20%;
   }
+  .about {
+    margin-bottom: 37rem;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -476,8 +483,11 @@ i[class*="van-type-"] {
     width: 25%;
   }
   .van-detail-card .rent-type {
-    padding: .9rem;
+    padding: 0.9rem;
     font-size: 1.2rem;
+  }
+  .about {
+    margin-bottom: 39rem;
   }
 }
 
@@ -503,8 +513,11 @@ i[class*="van-type-"] {
     width: 30%;
   }
   .van-detail-card .rent-type {
-    padding: .8rem;
+    padding: 0.8rem;
     font-size: 1.1rem;
+  }
+  .about {
+    margin-bottom: 41rem;
   }
 }
 
@@ -521,9 +534,6 @@ i[class*="van-type-"] {
   .card-sec-div h2 {
     font-size: 1.3rem;
   }
-  .footer {
-    font-size: 1.3rem;
-  }
   .logo > a {
     font-size: 1.5rem;
   }
@@ -535,8 +545,11 @@ i[class*="van-type-"] {
     width: 35%;
   }
   .van-detail-card .rent-type {
-    padding: .7rem;
+    padding: 0.7rem;
     font-size: 1rem;
+  }
+  .about {
+    margin-bottom: 43rem;
   }
 }
 
@@ -560,6 +573,9 @@ i[class*="van-type-"] {
     margin: 1rem 0;
     width: 40%;
   }
+  .about {
+    margin-bottom: 45rem;
+  }
 }
 @media only screen and (max-width: 425px) {
   .content h1 {
@@ -577,5 +593,20 @@ i[class*="van-type-"] {
   .van-detail-card .van-type {
     margin: 1rem 0;
     width: 45%;
+  }
+  .about {
+    margin-bottom: 47rem;
+  }
+}
+
+@media only screen and (max-width: 355px) {
+  .about {
+    margin-bottom: 50rem;
+  }
+}
+
+@media only screen and (max-width: 324px) {
+  .about {
+    margin-bottom: 52rem;
   }
 }

@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar";
 const Home = () => {
     return (
         <div className="home">
-            <Navbar />
             <div className="hero">
                 <div className="gradient"></div>
                 <div className="content">
@@ -14,7 +13,6 @@ const Home = () => {
                     <Link to="/vans" className="find-btn">Find your van</Link>
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }

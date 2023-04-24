@@ -15,7 +15,6 @@ const VanDetail = () => {
 
     return (
         <div className="van-detail">
-            <Navbar />
             {vanData ?
                 <div className="container">
                     <div className="van-detail-card">
@@ -27,7 +26,6 @@ const VanDetail = () => {
                         <button className="rent-type">Rent this van</button>
                     </div>
                 </div> : <div className="loading">Loading...</div>}
-            <Footer />
         </div>
     )
 }
