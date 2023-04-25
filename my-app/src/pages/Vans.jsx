@@ -1,6 +1,4 @@
-import Navbar from "../components/Navbar";
 import VanCard from '../components/VanCard';
-import Footer from '../components/Footer';
 import { useEffect, useState } from "react";
 import '../server';
 

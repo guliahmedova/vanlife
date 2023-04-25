@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <div className='navbar'>
             <div className="logo">
-                <Link to="/">vanlife</Link>
+                <NavLink className={({ isActive }) => isActive ? "linkActive" : ""} to="/">vanlife</NavLink>
             </div>
             <ul className="nav-menu">
-                <li><Link to="/host">Host</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/vans">Vans</Link></li>
+                <li><NavLink className={({ isActive }) => isActive ? "linkActive" : ""} to="/host">Host</NavLink></li>
+                <li><NavLink className={({ isActive }) => isActive ? "linkActive" : ""} to="/about">About</NavLink></li>
+                <li><NavLink className={({ isActive }) => isActive ? "linkActive" : ""} to="/vans">Vans</NavLink></li>
             </ul>
         </div>
     )
