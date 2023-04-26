@@ -94,7 +94,7 @@ h6 {
   --dir-blue: #8db1ab;
   --blue-gray: #587792;
 }
-.linkActive{
+.linkActive {
   text-decoration: underline;
 }
 /*HOME start*/
@@ -457,53 +457,140 @@ i[class*="van-type-"] {
 /*van-detail ends*/
 
 /*vans start*/
-.host-navbar{
+.host-navbar {
   display: flex;
   justify-content: space-around;
   margin: 2rem 0;
 }
-.host-navbar a{
+.host-navbar a {
   font-size: 1.2rem;
   color: black;
   border: 1px solid black;
-  padding: .5rem;
-  border-radius: .5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
-.host-navbar a:hover{
+.host-navbar a:hover {
   background-color: white;
 }
 /*vans end*/
 
 /*HostVanCard start*/
-.host-van-card{
+.host-van-card {
   background-color: white;
   margin: 2rem 0;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   display: flex;
   gap: 5rem;
   padding: 2rem;
   color: black;
   width: 100%;
 }
-.host-van-card img{
+.host-van-card img {
   width: 5rem;
   height: 5rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
-.host-van-card h3{
+.host-van-card h3 {
   font-weight: 800;
   font-size: 1.5rem;
 }
-.host-van-card .text{
+.host-van-card .text {
   display: flex;
   flex-direction: column;
 }
-.host-vans h1{
+.host-vans h1 {
   font-size: 2rem;
   font-weight: 900;
 }
 /*HostVanCard end*/
+
+/*host-van-detail start*/
+.host-van-detail {
+  background-color: white;
+}
+.host-van-detail .host-van-detail-card {
+  border-radius: 0.5rem;
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+.host-van-detail .host-van-detail-card img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 0.1rem;
+}
+.vancontent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.host-van-detail-card h1 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.host-van-detail-card h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.host-van-detail-card .van-type {
+  margin: 0%;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+.host-van-detail-navbar {
+  padding: 0 3.9rem;
+  display: flex;
+  gap: 6rem;
+}
+.host-van-detail-navbar a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: black;
+}
+.back-button {
+  color: #000;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+  padding: 2rem 0 0 3.9rem;
+}
+.back-button:hover {
+  text-decoration: underline;
+  transition: 0.5s all ease-in;
+}
+.back-button span {
+  padding-top: 2rem;
+}
+.host-van-info {
+  padding: 2rem;
+}
+.host-van-info h4 {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+.host-van-info h4 span {
+  font-weight: 500;
+  color: gray;
+}
+.host-van-pricing{
+  padding: 2rem;
+  font-size: 2rem;
+}
+.host-van-pricing span:first-child{
+  font-weight: 900;
+}
+.host-van-photos{
+  padding: 2rem;
+}
+.host-van-photos img{
+  width: 10rem;
+  height: 10rem;
+  border-radius: .5rem;
+}
+/*host-van-detail end*/
 
 /* responsive */
 @media only screen and (max-width: 1200px) {
@@ -648,19 +735,19 @@ i[class*="van-type-"] {
   .about {
     margin-bottom: 47rem;
   }
-  .host-van-card h3{
+  .host-van-card h3 {
     font-size: 1.2rem;
   }
-  .host-van-card{
+  .host-van-card {
     gap: 4rem;
   }
-  .host-navbar{
+  .host-navbar {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
     justify-content: center;
   }
-  .host-vans h1{
+  .host-vans h1 {
     font-size: 1.5rem;
     text-align: center;
   }
@@ -670,10 +757,10 @@ i[class*="van-type-"] {
   .about {
     margin-bottom: 50rem;
   }
-  .host-van-card h3{
+  .host-van-card h3 {
     font-size: 1rem;
   }
-  .host-van-card{
+  .host-van-card {
     gap: 3rem;
   }
 }
@@ -682,10 +769,10 @@ i[class*="van-type-"] {
   .about {
     margin-bottom: 52rem;
   }
-  .host-van-card h3{
+  .host-van-card h3 {
     font-size: 1rem;
   }
-  .host-van-card{
+  .host-van-card {
     gap: 2rem;
   }
 }
