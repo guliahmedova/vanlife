@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 
 const VanCard = (props) => {
+  console.log(props.state);
+  
   return (
-    <Link to={`/vans/${props.id}`} className='card'>
+    <Link to={props.id} className='card' state={props.state}>
       <img src={props.imageUrl} alt="" />
       <div className="title">
         <h1>{props.name}</h1>

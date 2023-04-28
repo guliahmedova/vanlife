@@ -266,7 +266,8 @@ h6 {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .filter-btn:hover {
-  background-color: transparent;
+  background-color: wheat;
+  color: black;
   border: 1px solid black;
 }
 .filter-clear-btn {
@@ -415,7 +416,7 @@ i[class*="van-type-"] {
   margin: 2rem auto;
 }
 .van-detail .van-detail-card img {
-  width: 90%;
+  width: 50%;
   height: auto;
   object-fit: cover;
   display: block;
@@ -687,8 +688,41 @@ i[class*="van-type-"] {
   margin: .5rem 0;
   font-size: 1.1rem;
 }
+.selected{
+  background-color: black;
+  color: whitesmoke;
+}
 /*reviews end*/
 
+/*page not found*/
+.notfound{
+  padding: 2rem;
+  margin-bottom: 22rem;
+}
+.notfound h1{
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.notfound a{
+  background-color: black;
+  color: whitesmoke;
+  padding: 1rem;
+  border-radius: .5rem;
+  border: 1px solid black;
+}
+.notfound a:hover{
+  background-color: whitesmoke;
+  color: black;
+  border: 1px solid black;
+}
+.back-to-home-btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/*page not found*/
 
 /* responsive */
 @media only screen and (max-width: 1200px) {
@@ -708,6 +742,9 @@ i[class*="van-type-"] {
   .about {
     margin-bottom: 37rem;
   }
+  .notfound h1{
+    font-size: 2.4rem;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -724,6 +761,9 @@ i[class*="van-type-"] {
   }
   .about {
     margin-bottom: 39rem;
+  }
+  .notfound h1{
+    font-size: 2.3rem;
   }
 }
 
@@ -754,6 +794,9 @@ i[class*="van-type-"] {
   }
   .about {
     margin-bottom: 41rem;
+  }
+  .notfound h1{
+    font-size: 2.2rem;
   }
 }
 
@@ -812,9 +855,14 @@ i[class*="van-type-"] {
   .about {
     margin-bottom: 45rem;
   }
+  .notfound h1{
+    font-size: 2.1rem;
+  }
 }
 @media only screen and (max-width: 486px) {
-
+  .notfound h1{
+    font-size: 2rem;
+  }
 }
 @media only screen and (max-width: 425px) {
   .content h1 {
@@ -852,6 +900,9 @@ i[class*="van-type-"] {
     font-size: 1.5rem;
     text-align: center;
   }
+  .notfound h1{
+    font-size: 1.9rem;
+  }
 }
 @media (max-width: 486px) {
   .side, .middle {
@@ -864,6 +915,9 @@ i[class*="van-type-"] {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .notfound h1{
+    font-size: 1.8rem;
   }
 }
 
@@ -882,6 +936,9 @@ i[class*="van-type-"] {
     flex-direction: column;
     align-items: center;
   }
+  .notfound h1{
+    font-size: 1.7rem;
+  }
 }
 @media only screen and (max-width: 339px) {
   .reviews-title{
@@ -889,6 +946,9 @@ i[class*="van-type-"] {
     font-size: 1.3rem;
     flex-direction: column;
     align-items: center;
+  }
+  .notfound h1{
+    font-size: 1.6rem;
   }
 }
 
@@ -907,4 +967,7 @@ i[class*="van-type-"] {
     flex-direction: column;
     align-items: center;
   } 
+  .notfound h1{
+    font-size: 1.5rem;
+  }
 }

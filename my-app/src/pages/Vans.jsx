@@ -15,12 +15,24 @@ const Vans = () => {
             .then(data => setVansData(data?.vans))
     }, []);
 
-    const vanCards = vansData.map((van) => {
-        return <VanCard key={van.id} {...van} />
+    const displayedVans = typeFilter ? vansData.filter(van => van.type === typeFilter) : vansData;
+    
+    const vanCards = displayedVans.map((van) => {
+        return <VanCard key={van.id} {...van} state={{search: `?${searchParams.toString()}`, type: typeFilter}}/>
     });
 
-    const displayedVans = typeFilter ? vanCards.filter(van => van.type === typeFilter) : vansData;
-    
+
+    function handleFilterChange(key, value) {
+        setSearchParams(prevParams => {
+            if (value === null) {
+                prevParams.delete(key);
+            } else {
+                prevParams.set(key, value);
+            }
+            return prevParams;
+        });
+    };
+
     return (
         <div className="vans">
             <section className="vans-top">
@@ -28,10 +40,14 @@ const Vans = () => {
                     <h1 className="vans-title">Explore our van options</h1>
 
                     <div className="filters">
-                        <button onClick={() => setSearchParams("?type=simple")} className="filter-btn">Simple</button>
-                        <button onClick={() => setSearchParams("?type=luxury")} className="filter-btn">Luxury</button>
-                        <button onClick={() => setSearchParams("?type=rugged")} className="filter-btn">Rugged</button>
-                        <button onClick={() => setSearchParams(".")} className="filter-clear-btn">Clear filters</button>
+                        <button onClick={() => setSearchParams("?type=simple")} className={`filter-btn ${typeFilter === 'simple' ? "selected" : ""}`}>Simple</button>
+                        <button onClick={() => setSearchParams("?type=luxury")} className={`filter-btn ${typeFilter === 'luxury' ? "selected" : ""}`}>Luxury</button>
+                        <button onClick={() => setSearchParams("?type=rugged")} className={`filter-btn ${typeFilter === 'rugged' ? "selected" : ""}`}>Rugged</button>
+                        {
+                            typeFilter ? (
+                                <button onClick={() => setSearchParams(".")} className="filter-clear-btn">Clear filters</button>
+                            ) : null
+                        }
                     </div>
                 </div>
             </section>
