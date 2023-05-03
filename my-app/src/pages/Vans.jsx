@@ -1,37 +1,26 @@
 import VanCard from '../components/VanCard';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import '../server';
 import { useSearchParams } from 'react-router-dom';
+import { getVans } from '../utils/api'
+import { useLoaderData } from 'react-router-dom';
+
+export function loader() {
+    return getVans();
+};
 
 const Vans = () => {
     const [searchParams, setSearchParams] = useSearchParams();
-    const [vansData, setVansData] = useState([]);
-
+    const [error, setError] = useState(null)
     const typeFilter = searchParams.get('type');
 
-    useEffect(() => {
-        fetch("/api/vans")
-            .then(res => res.json())
-            .then(data => setVansData(data?.vans))
-    }, []);
+    const vans = useLoaderData();
 
-    const displayedVans = typeFilter ? vansData.filter(van => van.type === typeFilter) : vansData;
-    
+    const displayedVans = typeFilter ? vans.filter(van => van.type === typeFilter) : vans;
+
     const vanCards = displayedVans.map((van) => {
-        return <VanCard key={van.id} {...van} state={{search: `?${searchParams.toString()}`, type: typeFilter}}/>
+        return <VanCard key={van.id} {...van} state={{ search: `?${searchParams.toString()}`, type: typeFilter }} />
     });
-
-
-    function handleFilterChange(key, value) {
-        setSearchParams(prevParams => {
-            if (value === null) {
-                prevParams.delete(key);
-            } else {
-                prevParams.set(key, value);
-            }
-            return prevParams;
-        });
-    };
 
     return (
         <div className="vans">
@@ -55,8 +44,11 @@ const Vans = () => {
             <section className="main">
                 <div className="cards">
                     {
-                        vanCards ? vanCards : <div className="loading">Loading...</div>
+                        vanCards
                     }
+                </div>
+                <div className="error">
+                    {error && error}
                 </div>
             </section>
 
