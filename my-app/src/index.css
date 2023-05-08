@@ -114,6 +114,7 @@ h6 {
 .nav-menu {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 .nav-menu li a {
   font-size: 1rem;
@@ -578,68 +579,68 @@ i[class*="van-type-"] {
   font-weight: 500;
   color: gray;
 }
-.host-van-pricing{
+.host-van-pricing {
   padding: 2rem;
   font-size: 2rem;
 }
-.host-van-pricing span:first-child{
+.host-van-pricing span:first-child {
   font-weight: 900;
 }
-.host-van-photos{
+.host-van-photos {
   padding: 2rem;
 }
-.host-van-photos img{
+.host-van-photos img {
   width: 10rem;
   height: 10rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 /*host-van-detail end*/
 
 /*reviews start*/
-.reviews{
+.reviews {
   padding: 2rem;
 }
-.reviews-title{
+.reviews-title {
   font-size: 2rem;
   font-weight: 900;
 }
-.reviews-title span{
-  font-size:1rem;
+.reviews-title span {
+  font-size: 1rem;
   text-transform: lowercase;
 }
-.reviews-title strong{
+.reviews-title strong {
   font-weight: 800;
   font-size: 1rem;
   text-transform: lowercase;
   text-decoration: underline;
 }
-.rating .rating-title .rate{
+.rating .rating-title .rate {
   font-weight: 900;
   font-size: 1.5rem;
 }
-.rating .rating-title{
+.rating .rating-title {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-top: 1.5rem;
 }
-.rating-sliders{
+.rating-sliders {
   margin: 1.5rem 0;
 }
-.rate-text{
+.rate-text {
   text-transform: lowercase;
 }
-.star{
+.star {
   color: orange;
 }
 .side {
   float: left;
   width: 15%;
-  margin-top:10px;
+  margin-top: 10px;
 }
 .middle {
-  margin-top:10px;
+  margin-top: 10px;
   float: left;
   width: 70%;
 }
@@ -656,73 +657,153 @@ i[class*="van-type-"] {
   background-color: rgb(208, 208, 208);
   text-align: center;
   color: white;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
-.bar-5 {width: 100%; height: 18px; background-color:orange; border-radius: .5rem;}
-.bar-4 {width: 0%; height: 18px; background-color: orange;}
-.bar-3 {width: 0%; height: 18px; background-color: orange;}
-.bar-2 {width: 0%; height: 18px; background-color: orange;}
-.bar-1 {width: 0%; height: 18px; background-color: orange;}
+.bar-5 {
+  width: 100%;
+  height: 18px;
+  background-color: orange;
+  border-radius: 0.5rem;
+}
+.bar-4 {
+  width: 0%;
+  height: 18px;
+  background-color: orange;
+}
+.bar-3 {
+  width: 0%;
+  height: 18px;
+  background-color: orange;
+}
+.bar-2 {
+  width: 0%;
+  height: 18px;
+  background-color: orange;
+}
+.bar-1 {
+  width: 0%;
+  height: 18px;
+  background-color: orange;
+}
 
-.bottom-review{
+.bottom-review {
   display: flex;
   flex-direction: column;
 }
-.review-card{
+.review-card {
   display: flex;
   margin-top: 1rem;
   flex-direction: column;
   padding-bottom: 1.5rem;
-  border-bottom: .1px solid grey;
+  border-bottom: 0.1px solid grey;
 }
-.review-card .name{
-  margin: .6rem 0;
+.review-card .name {
+  margin: 0.6rem 0;
   color: gray;
 }
-.review-card .name strong{
+.review-card .name strong {
   font-weight: 900;
   color: black;
 }
-.bottom-review h3{
+.bottom-review h3 {
   font-weight: 900;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   font-size: 1.1rem;
 }
-.selected{
+.selected {
   background-color: black;
   color: whitesmoke;
 }
 /*reviews end*/
 
 /*page not found*/
-.notfound{
+.notfound {
   padding: 2rem;
   margin-bottom: 22rem;
 }
-.notfound h1{
+.notfound h1 {
   font-size: 2.5rem;
   font-weight: 900;
   text-align: center;
   margin-bottom: 2.5rem;
 }
-.notfound a{
+.notfound a {
   background-color: black;
   color: whitesmoke;
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: 1px solid black;
 }
-.notfound a:hover{
+.notfound a:hover {
   background-color: whitesmoke;
   color: black;
   border: 1px solid black;
 }
-.back-to-home-btn{
+.back-to-home-btn {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 /*page not found*/
+
+/*Login page starts*/
+.login {
+  padding: 2rem;
+}
+.login h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+.login form input {
+  border: 0.1rem solid white;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.login form input::placeholder {
+  color: gray;
+  font-weight: 100;
+}
+.login form input:focus {
+  border: 0.1rem solid wheat;
+}
+.login form button {
+  background-color: #e17654;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border: 0.1rem solid #e17654;
+  cursor: pointer;
+  width: 20%;
+  height: auto;
+  margin: 2rem auto;
+}
+.login form button:hover {
+  background-color: transparent;
+  color: #e17654;
+  border: 0.1rem solid #e17654;
+}
+.login p {
+  text-align: center;
+  margin: 3rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.login p a {
+  color: #e17654;
+}
+.login p a:hover {
+  text-decoration: underline;
+}
+/*Login page end*/
 
 /* responsive */
 @media only screen and (max-width: 1200px) {
@@ -742,8 +823,11 @@ i[class*="van-type-"] {
   .about {
     margin-bottom: 37rem;
   }
-  .notfound h1{
+  .notfound h1 {
     font-size: 2.4rem;
+  }
+  .login h1 {
+    font-size: 1.9rem;
   }
 }
 
@@ -762,8 +846,11 @@ i[class*="van-type-"] {
   .about {
     margin-bottom: 39rem;
   }
-  .notfound h1{
+  .notfound h1 {
     font-size: 2.3rem;
+  }
+  .login h1 {
+    font-size: 1.8rem;
   }
 }
 
@@ -795,8 +882,15 @@ i[class*="van-type-"] {
   .about {
     margin-bottom: 41rem;
   }
-  .notfound h1{
+  .notfound h1 {
     font-size: 2.2rem;
+  }
+  .login form button{
+    width: 25%;
+    font-size: 1.3rem;
+  }
+  .login h1 {
+    font-size: 1.7rem;
   }
 }
 
@@ -830,6 +924,13 @@ i[class*="van-type-"] {
   .about {
     margin-bottom: 43rem;
   }
+  .login form button{
+    width: 30%;
+    font-size: 1.2rem;
+  }
+  .login h1 {
+    font-size: 1.6rem;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -855,13 +956,23 @@ i[class*="van-type-"] {
   .about {
     margin-bottom: 45rem;
   }
-  .notfound h1{
+  .notfound h1 {
     font-size: 2.1rem;
+  }
+  .login h1 {
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 486px) {
-  .notfound h1{
+  .notfound h1 {
     font-size: 2rem;
+  }
+  .login form button{
+    width: 35%;
+    font-size: 1rem;
+  }
+  .login h1 {
+    font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: 425px) {
@@ -900,24 +1011,35 @@ i[class*="van-type-"] {
     font-size: 1.5rem;
     text-align: center;
   }
-  .notfound h1{
+  .notfound h1 {
     font-size: 1.9rem;
+  }
+  .login h1 {
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 486px) {
-  .side, .middle {
+  .side,
+  .middle {
     width: 100%;
   }
   .right {
     display: none;
   }
-  .reviews-title{
+  .reviews-title {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .notfound h1{
+  .notfound h1 {
     font-size: 1.8rem;
+  }
+  .login form button{
+    width: 38%;
+    font-size: .8rem;
+  }
+  .login h1 {
+    font-size: 1.2rem;
   }
 }
 
@@ -931,24 +1053,38 @@ i[class*="van-type-"] {
   .host-van-card {
     gap: 3rem;
   }
-  .reviews-title{
+  .reviews-title {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .notfound h1{
+  .notfound h1 {
     font-size: 1.7rem;
+  }
+  .login form button{
+    width: 40%;
+    font-size: .7rem;
+  }
+  .login h1 {
+    font-size: 1.1rem;
   }
 }
 @media only screen and (max-width: 339px) {
-  .reviews-title{
+  .reviews-title {
     display: flex;
     font-size: 1.3rem;
     flex-direction: column;
     align-items: center;
   }
-  .notfound h1{
+  .notfound h1 {
     font-size: 1.6rem;
+  }
+  .login form button{
+    width: 42%;
+    font-size: .7rem;
+  }
+  .login h1 {
+    font-size: 1rem;
   }
 }
 
@@ -962,12 +1098,12 @@ i[class*="van-type-"] {
   .host-van-card {
     gap: 2rem;
   }
-  .reviews-title{
+  .reviews-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-  } 
-  .notfound h1{
+  }
+  .notfound h1 {
     font-size: 1.5rem;
   }
 }
